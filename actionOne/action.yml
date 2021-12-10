@@ -10,5 +10,6 @@ runs:
   using: composite
   steps:
     - run: echo "Running file $file_name"
+      shell: bash
     - run: ${{ github.action_path }}/${file_name}.sh
       shell: bash
