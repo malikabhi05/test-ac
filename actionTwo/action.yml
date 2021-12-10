@@ -18,3 +18,4 @@ runs:
       run: |
         echo "TPM Tools Branch: $TPM2TOOLS_BRANCH"
         echo "TPM Tss Branch: $TPM2TSS_BRANCH"
+      shell: bash
