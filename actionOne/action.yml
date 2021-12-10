@@ -14,5 +14,5 @@ runs:
     - name: running Script
       env:
         FILE: ${{ inputs.file_name }}
-      run: ${{ github.action_path }}/$FILE
+      run: ${{ github.action_path }}/scripts/$FILE
       shell: bash
