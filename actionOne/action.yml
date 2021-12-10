@@ -1,0 +1,14 @@
+name: 'Action 1'
+
+description: 'test action 1'
+
+inputs:
+  file_name:
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - run: echo "Running file $file_name"
+    - run: ${{ github.action_path }}/${file_name}.sh
+      shell: bash
