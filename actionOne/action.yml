@@ -11,5 +11,8 @@ runs:
   steps:
     - run: echo "Running file $file_name"
       shell: bash
-    - run: ${{ github.action_path }}/${file_name}.sh
+    - name: running Script
+      env:
+        FILE: ${{ inputs.file_name }}
+      run: ${{ github.action_path }}/$FILE
       shell: bash
