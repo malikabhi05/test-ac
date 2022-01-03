@@ -6,7 +6,8 @@ set -exo pipefail
 DOCKER_SCRIPT="docker.run"
 COV_SCRIPT="coverity.run"
 
-export PROJECT="tpm2-totp"
+#export PROJECT="tpm2-totp"
+export PROJECT=${{ inputs.TPM2TOOLS_BRANCH }}
 export DOCKER_BUILD_DIR="/workspace/$PROJECT"
 
 # if no DOCKER_IMAGE is set, warn and default to fedora-30

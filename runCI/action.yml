@@ -3,6 +3,8 @@ name: 'Action 1'
 description: 'test action 1'
 
 inputs:
+  PROJECT_NAME:
+    required: true
   file_name:
     required: true
   TPM2TOOLS_BRANCH:
