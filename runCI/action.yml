@@ -1,6 +1,6 @@
-name: 'Action 1'
+name: 'runCI Action'
 
-description: 'test action 1'
+description: 'Action to run CI builds'
 
 inputs:
   PROJECT_NAME:
