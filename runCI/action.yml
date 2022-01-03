@@ -27,5 +27,6 @@ runs:
         TPM2TSS_BRANCH: ${{ inputs.TPM2TSS_BRANCH }}
         CC: ${{ inputs.CC }}
         DOCKER_IMAGE: ${{ inputs.DOCKER_IMAGE }}
+        PROJECT_NAME: ${{ inputs.PROJECT_NAME }}
       run: ${{ github.action_path }}/../scripts/ci.sh
       shell: bash
