@@ -12,9 +12,9 @@ inputs:
   REPO_NAME:
     required: true
   TPM2TOOLS_BRANCH:
-    required: true
+    required: false
   TPM2TSS_BRANCH:
-    required: true
+    required: false
   CC:
     required: true
   DOCKER_IMAGE:
