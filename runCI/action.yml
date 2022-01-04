@@ -5,14 +5,14 @@ description: 'Action to run CI builds'
 inputs:
   PROJECT_NAME:
     required: true
-  TPM2TOOLS_BRANCH:
-    required: false
-  TPM2TSS_BRANCH:
-    required: false
   CC:
     required: true
   DOCKER_IMAGE:
     required: true
+  TPM2TOOLS_BRANCH:
+    required: false
+  TPM2TSS_BRANCH:
+    required: false
   BASE_REF:
     required: false
   SCANBUILD:
@@ -24,6 +24,8 @@ inputs:
   ENABLE_COVERAGE:
     required: false
   GEN_FUZZ:
+    required: false
+  CXX:
     required: false
 
 runs:
@@ -42,5 +44,6 @@ runs:
         WITH_CRYPTO: ${{ inputs.WITH_CRYPTO }}
         ENABLE_COVERAGE: ${{ inputs.ENABLE_COVERAGE }}
         GEN_FUZZ: ${{ inputs.GEN_FUZZ }}
+        CXX: ${{ inputs.CXX }}
       run: ${{ github.action_path }}/../scripts/ci.sh
       shell: bash
