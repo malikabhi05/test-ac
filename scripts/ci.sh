@@ -13,7 +13,7 @@ export DOCKER_BUILD_DIR="/workspace/$PROJECT"
 # if no DOCKER_IMAGE is set, warn and default to fedora-30
 if [ -z "$DOCKER_IMAGE" ]; then
   echo "WARN: DOCKER_IMAGE is not set, defaulting to fedora-30"
-  export DOCKER_IMAGE="fedora-30"
+  export DOCKER_IMAGE="fedora-32"
 fi
 
 #
