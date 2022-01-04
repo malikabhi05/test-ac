@@ -27,6 +27,10 @@ inputs:
     required: false
   CXX:
     required: false
+  GIT_FULL_CLONE:
+    required: false
+  MAKE_TARGET:
+    required: false
 
 runs:
   using: composite
@@ -45,5 +49,7 @@ runs:
         ENABLE_COVERAGE: ${{ inputs.ENABLE_COVERAGE }}
         GEN_FUZZ: ${{ inputs.GEN_FUZZ }}
         CXX: ${{ inputs.CXX }}
+        GIT_FULL_CLONE: ${{ inputs.GIT_FULL_CLONE }}
+        MAKE_TARGET: ${{ inputs.MAKE_TARGET }}
       run: ${{ github.action_path }}/../scripts/ci.sh
       shell: bash
