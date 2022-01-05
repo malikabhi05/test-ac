@@ -31,6 +31,8 @@ inputs:
     required: false
   MAKE_TARGET:
     required: false
+  ENABLE_FUZZING:
+    required: false
 
 runs:
   using: composite
@@ -51,5 +53,6 @@ runs:
         CXX: ${{ inputs.CXX }}
         GIT_FULL_CLONE: ${{ inputs.GIT_FULL_CLONE }}
         MAKE_TARGET: ${{ inputs.MAKE_TARGET }}
+        ENABLE_FUZZING: ${{ inputs.ENABLE_FUZZING }}
       run: ${{ github.action_path }}/../scripts/ci.sh
       shell: bash
