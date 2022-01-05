@@ -33,6 +33,8 @@ inputs:
     required: false
   ENABLE_FUZZING:
     required: false
+  TPM2_TSS_VERSION:
+    required: false
 
 runs:
   using: composite
@@ -54,5 +56,6 @@ runs:
         GIT_FULL_CLONE: ${{ inputs.GIT_FULL_CLONE }}
         MAKE_TARGET: ${{ inputs.MAKE_TARGET }}
         ENABLE_FUZZING: ${{ inputs.ENABLE_FUZZING }}
+        TPM2_TSS_VERSION: ${{ inputs.TPM2_TSS_VERSION }}
       run: ${{ github.action_path }}/../scripts/ci.sh
       shell: bash
